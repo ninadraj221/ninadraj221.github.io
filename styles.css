@@ -1,0 +1,428 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --dark-100: #1e2139;
+  --dark-75: #3e4167;
+  --dark-50: #54597e;
+  --dark-25: #676a92;
+  --dark-0: #7f7ea1;
+
+  --pink-100: #fdd3e8;
+  --pink-50: #fddaeb;
+  --pink-0: #fbeff5;
+}
+
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styles */
+
+/* Navbar */
+nav {
+  position: absolute;
+
+  width: 100%;
+  padding: 1rem;
+
+  /* color: var(--dark-100); */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links > li {
+  margin: 0 0.5rem;
+}
+
+.nav-links > li > a:not(.ctn) {
+  text-decoration: none;
+  color: var(--dark-100);
+}
+
+.nav-links > li > a:not(.ctn):hover {
+  transition: all 200ms ease-in;
+  font-weight: bold;
+}
+
+a:focus {
+  font-weight: bold;
+  /* font-size: large; */
+}
+
+.logo {
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--dark-100);
+}
+
+.menu-button {
+  position: absolute;
+  height: 30px;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 100vh;
+
+  background-image: url(./assets/mountain_background_image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-content {
+  text-align: center;
+}
+
+/* .header-content > * {
+  margin: 1rem;
+} */
+
+.header-content > h2 {
+  color: var(--dark-100);
+  font-size: 2rem;
+
+  margin-bottom: 0.7rem;
+}
+
+.header-content > .line {
+  width: 100%;
+  height: 5px;
+  margin-bottom: 1rem;
+  /* background: linear-gradient(90deg, var(--pink-100), var(--dark-100)); */
+
+  background-color: var(--dark-50);
+  border-radius: 20px;
+}
+
+.header-content > h1 {
+  color: var(--dark-100);
+  font-size: 2.8rem;
+
+  margin-bottom: 1rem;
+}
+
+.ctn {
+  cursor: pointer;
+
+  background-color: var(--dark-25);
+  color: whitesmoke;
+
+  padding: 0.5rem;
+
+  font-size: 1rem;
+
+  text-decoration: none;
+  text-align: center;
+}
+
+.ctn:hover {
+  background-color: var(--dark-75);
+  /* transform: translateY(100px); */
+  transition: all 300ms ease-in;
+}
+
+/* For setting opacity of the background */
+/* header::before {
+  content: "";
+
+  min-width: 100%;
+  height: 100vh;
+
+  position: absolute;
+
+  background-image: url(./assets/mountain_background_image.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.75;
+} */
+
+/* @media (max-width: 600px) {
+  header {
+    min-height: 30rem;
+  }
+} */
+
+/* Section */
+
+section {
+  width: 80%;
+  margin: 3rem auto;
+}
+
+.title {
+  text-align: center;
+  color: var(--dark-75);
+  font-size: 1.5rem;
+  /* margin-bottom: 1.5rem; */
+}
+
+.row {
+  display: flex;
+
+  min-width: 100%;
+
+  /* justify-content: space-between;
+  align-items: center; */
+
+  /* background-color: #fbeff5; */
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* text-align: center; */
+}
+
+.col > img {
+  width: 90%;
+  height: 300px;
+
+  /* max-width: 90%;
+  max-height: 200px; */
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.events .row {
+  margin-top: 2rem;
+}
+
+.col h4 {
+  font-size: 1.3rem;
+  margin: 0.8rem auto;
+  color: var(--dark-75);
+}
+
+.col p {
+  color: var(--dark-50);
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.explore {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.explore::before {
+  content: "";
+  background-image: url("./assets/background_image_2.jped.jpeg");
+
+  min-width: 100%;
+  min-height: 100vh;
+
+  position: absolute;
+  z-index: -1;
+
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  opacity: 0.95;
+}
+
+.explore-content {
+  width: 50%;
+  padding: 50px;
+  color: var(--pink-0);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.explore-content h1 {
+  font-size: 3rem;
+}
+
+.explore-content p {
+  margin-top: 1rem;
+}
+
+.explore .ctn {
+  margin-top: 1rem;
+}
+
+.explore-content > .line {
+  width: 60%;
+  height: 5px;
+  margin-bottom: 1rem;
+  /* background: linear-gradient(90deg, var(--pink-100), var(--dark-100)); */
+
+  margin-top: 0.5rem;
+
+  background-color: var(--dark-0);
+  border-radius: 20px;
+}
+
+.tours > .row {
+  display: flex;
+  min-width: 100%;
+  align-items: center;
+}
+
+.information {
+  width: 40%;
+  text-align: center;
+}
+
+.information > h1 {
+  color: var(--dark-75);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.information > p {
+  color: var(--dark-75);
+  /* font-size: 2rem;
+  margin-bottom: 1rem; */
+}
+
+.images {
+  width: 60%;
+}
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  width: 100%;
+}
+
+.image-gallery > img {
+  width: 300px;
+  /* height: 200px; */
+
+  object-fit: cover;
+  object-position: bottom;
+  margin: 0.5rem;
+}
+
+.footer {
+  width: 100%;
+  background-color: var(--dark-100);
+  color: whitesmoke;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 10px;
+}
+
+/* Mobile Device */
+
+@media (max-width: 850px) {
+  .menu-button {
+    display: block;
+  }
+
+  nav {
+    padding: 0;
+  }
+
+  .logo {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    background-color: var(--pink-0);
+    margin-top: -1200px;
+    transition: all 0.5s ease;
+  }
+
+  .nav-links li {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    width: 100%;
+  }
+
+  .mobile-menu {
+    margin-top: 0px;
+    border-bottom-right-radius: 30%;
+  }
+
+  .ctn {
+    font-size: 1.3rem;
+  }
+
+  /* Events */
+  .row {
+    flex-direction: column;
+  }
+
+  .row .col {
+    margin: 20px auto;
+  }
+
+  /* Explore */
+  .explore-content {
+    width: 100%;
+  }
+
+  /* Tours */
+  .tours .col {
+    width: 100%;
+  }
+
+  .image-gallery {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-gallery > img {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Animations */
+
+img {
+  transition: all 0.3s ease;
+  /* box-shadow: 2px 2px 20px black; */
+}
+
+img:hover {
+  transform: scale(1.1);
+}
